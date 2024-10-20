@@ -760,8 +760,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6448748588042597065}
-  - component: {fileID: 6371367207503978173}
   - component: {fileID: 6064548430898837969}
+  - component: {fileID: 8483427574417885978}
   m_Layer: 0
   m_Name: Bullet
   m_TagString: Bullet
@@ -791,33 +791,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6371367207503978173
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6448748588042597066}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c9998a05626095c449aff70774608f72, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bulletGenerator: {fileID: 0}
-  enable: 0
-  type: 0
-  element: 0
-  speed: 10
-  damage: 0
-  pierceCount: 0
-  sprites:
-  - {fileID: 4717113310436746219}
-  - {fileID: 2138021349036199432}
-  - {fileID: 9222610919444160713}
-  - {fileID: 774371049552932678}
-  - {fileID: 6226039272145542526}
-  - {fileID: 1541476613185031143}
-  - {fileID: 8567881483530525527}
 --- !u!61 &6064548430898837969
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -844,6 +817,34 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.15, y: 0.9}
   m_EdgeRadius: 0
+--- !u!114 &8483427574417885978
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6448748588042597066}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0bb35288f01e3364fb23c8d4f99493e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletGenerator: {fileID: 0}
+  enable: 0
+  type: 0
+  element: 0
+  speed: 0
+  damage: 0
+  bulletLevel: 
+  isSplitPlus: 0
+  sprites:
+  - {fileID: 4717113310436746219}
+  - {fileID: 2138021349036199432}
+  - {fileID: 9222610919444160713}
+  - {fileID: 774371049552932678}
+  - {fileID: 6226039272145542526}
+  - {fileID: 1541476613185031143}
+  - {fileID: 8567881483530525527}
 --- !u!1 &6448748589333027909
 GameObject:
   m_ObjectHideFlags: 0

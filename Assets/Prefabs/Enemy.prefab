@@ -264,7 +264,7 @@ GameObject:
   - component: {fileID: 2534085387933192627}
   - component: {fileID: 2534085387933192624}
   - component: {fileID: 2534085387933192625}
-  - component: {fileID: 8313770842625314333}
+  - component: {fileID: 7155935189653748089}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Enemy
@@ -329,7 +329,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &8313770842625314333
+--- !u!114 &7155935189653748089
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -338,29 +338,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 2534085387933192626}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aef42554237bcd54286f41bc0d8d3fac, type: 3}
+  m_Script: {fileID: 11500000, guid: a8bdebc040279b747a7c7b7b79fd5480, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
-  levelManager: {fileID: 0}
-  enemyBullet: {fileID: 4186235061371853451, guid: 2665237a1caab5f49bb93eff341f23cd, type: 3}
+  _sprite: {fileID: 5610092274077622557}
+  _collider: {fileID: 2534085387933192624}
   destroyParticle: {fileID: 719522458371082845, guid: 0014c568c15230f4d843d30c2bbd1720, type: 3}
-  heart: {fileID: 3563619599218231026, guid: a0812c250b10879439d1357dc89d6368, type: 3}
-  pointItem: {fileID: 3723717261165054584, guid: 979ff89e498c9d443b6ea168dc11d646, type: 3}
-  shotInterval: 1
-  type: 2
-  turnPlayer: 0
-  hitFlgReset: 0
-  shotEnable: 0
-  speedMultiply: 1
-  maxHP: 0
-  sprites:
-  - {fileID: 5610092274077622557}
-  - {fileID: 3805857372107033118}
-  - {fileID: 5257983348893944203}
-  - {fileID: 7477951153352441038}
-  - {fileID: 2534085386544070508}
-  enable: 1
+  heartItem: {fileID: 7295200067656282397, guid: a0812c250b10879439d1357dc89d6368, type: 3}
+  pointItem: {fileID: 7870730626001700278, guid: 979ff89e498c9d443b6ea168dc11d646, type: 3}
 --- !u!1 &3015244420404594090
 GameObject:
   m_ObjectHideFlags: 0

@@ -2,15 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using PathCreation;
+using UnityEngine.Serialization;
 
 public class EasyMode : MonoBehaviour
 {
+    /*
     [Header("Class")]
     [SerializeField] private Player player;
     [SerializeField] private LevelManager levelManager;
 
+    [FormerlySerializedAs("enemy")]
     [Space(5), Header("Prefab")]
-    [SerializeField] private Enemy enemy;
+    [SerializeField] private Enemy enemyOld;
 
     [Space(5), Header("Path")]
     [SerializeField] private PathCreator[] path;
@@ -48,10 +51,11 @@ public class EasyMode : MonoBehaviour
 
     private void Spawn(PathCreator _path, float _speed, EnemyType _type, float _maxHP, float _shotInterval, float _speedMultiply, bool _turnPlayer, float _shotEnableDelay)
     {
-        var _enemy = Instantiate(enemy, new Vector3(0, 5, 0), Quaternion.identity);
+        var _enemy = Instantiate(enemyOld, new Vector3(0, 5, 0), Quaternion.identity);
         var _enemyPath = _enemy.GetComponent<EnemyPathMove>();
         _enemy.SetUp(player, levelManager, _type, _maxHP, _shotInterval, _speedMultiply, _turnPlayer, _shotEnableDelay);
         _enemyPath.pathCreator = _path;
         _enemyPath.speed = _speed;
     }
+    */
 }

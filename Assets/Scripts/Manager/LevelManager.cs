@@ -9,7 +9,6 @@ public class LevelManager : MonoBehaviour
 {
     [Header("Class")]
     [SerializeField] private Player player;
-    [SerializeField] private BulletGenerator bulletGenerator;
 
     [Space(5), Header("Setting")]
     public int point;

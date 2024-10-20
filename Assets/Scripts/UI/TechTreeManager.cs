@@ -9,7 +9,7 @@ public class TechTreeManager : MonoBehaviour
     [SerializeField] private Player player;
     [SerializeField] private LevelManager levelManager;
     [SerializeField] private Pose pose;
-    [SerializeField] private BulletGenerator bulletGenerator;
+    // [SerializeField] private BulletGenerator bulletGenerator;
 
     [Space(5), Header("Node")]
     [SerializeField] private TechTreeNode[] pierce;
@@ -66,7 +66,7 @@ public class TechTreeManager : MonoBehaviour
             else levelManager.point -= price;
             pose.UpdatePointDisplay();
             levelManager.UsePoint();
-            bulletGenerator.isSplitPlus = true;
+            // bulletGenerator.isSplitPlus = true;
             splitPlus.UnlockNode();
             return;
         }

@@ -22,9 +22,9 @@ public class Pose : MonoBehaviour
 
     private void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Escape))
         {
-            if(isOpenUI)
+            if (isOpenUI)
             {
                 isOpenUI = false;
                 buttons.SetActive(true);

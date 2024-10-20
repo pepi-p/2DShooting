@@ -7,8 +7,8 @@ public class Player : MonoBehaviour
 {
     [Header("Class")]
     [SerializeField] BulletGenerator bulletGenerator;
-    [SerializeField] HPManager hpManager;
-    [SerializeField] LevelManager levelManager;
+    [SerializeField] private HPManager hpManager;
+    [SerializeField] private LevelManager levelManager;
 
     [Space(5), Header("Prefab")]
     [SerializeField] private Bullet[] bullets;
@@ -34,7 +34,7 @@ public class Player : MonoBehaviour
 
     void Start()
     {
-        bulletGenerator.bulletLevel = bulletLevel;
+        // bulletGenerator.bulletLevel = bulletLevel;
     }
 
     void Update()
@@ -47,15 +47,15 @@ public class Player : MonoBehaviour
 
         var _speed = Input.GetKey(KeyCode.LeftShift) ? speed / 2f : speed;
 
-        this.transform.position += new Vector3(horizontal, vertical).normalized * _speed * Time.deltaTime;
+        this.transform.position += new Vector3(horizontal, vertical).normalized * (_speed * Time.deltaTime);
         this.transform.localPosition = new Vector3(Mathf.Clamp(this.transform.localPosition.x, -4, 4), Mathf.Clamp(this.transform.localPosition.y, -4.5f, 4.5f), this.transform.localPosition.z);
 
         hantei.SetActive(Input.GetKey(KeyCode.LeftShift));
 
-        if(Input.GetKey(KeyCode.Z) && bullet_cooldown <= 0) Shot(playerPos);
-        if(Input.GetKeyDown(KeyCode.X)) ShotBomb();
+        if (Input.GetKey(KeyCode.Z) && bullet_cooldown <= 0) Shot(playerPos);
+        if (Input.GetKeyDown(KeyCode.X)) ShotBomb();
 
-        if(bullet_cooldown > 0) bullet_cooldown -= Time.deltaTime;
+        if (bullet_cooldown > 0) bullet_cooldown -= Time.deltaTime;
     }
 
     private void Shot(Vector3 pos)
@@ -63,7 +63,7 @@ public class Player : MonoBehaviour
         bullet_cooldown = shotInterval;
 
         // 貫通
-        switch(bulletLevel[(int)BulletType.Pierce])
+        switch (bulletLevel[(int)BulletType.Pierce])
         {
             case 1 :
                 break;
@@ -74,7 +74,7 @@ public class Player : MonoBehaviour
         }
 
         // 爆発
-        switch(bulletLevel[(int)BulletType.Explosion])
+        switch (bulletLevel[(int)BulletType.Explosion])
         {
             case 1 :
                 break;
@@ -85,7 +85,7 @@ public class Player : MonoBehaviour
         }
 
         // 拡散
-        switch(bulletLevel[(int)BulletType.Spread])
+        switch (bulletLevel[(int)BulletType.Spread])
         {
             case 0 :
                 bulletGenerator.ShotPlayerBullet(pos, 0, 10, 1 * damageMultiply, BulletType.Normal);
@@ -94,15 +94,15 @@ public class Player : MonoBehaviour
                 for(int i = -1; i <= 1; i++) bulletGenerator.ShotPlayerBullet(pos, i * 10, 10, 1.0f * damageMultiply, BulletType.Spread);
                 break;
             case 2 :
-                for(int i = 0; i < 4; i++) bulletGenerator.ShotPlayerBullet(pos, i * 5 - 7.5f, 10, 1.0f * damageMultiply, BulletType.Spread);
+                for(int i = -4; i <= 4; i++) bulletGenerator.ShotPlayerBullet(pos, i * 5f, 10, 1.2f * damageMultiply, BulletType.Spread);
                 break;
             case 3 :
-                for(int i = -2; i <= 2; i++) bulletGenerator.ShotPlayerBullet(pos, i * 5, 10, 1.2f * damageMultiply, BulletType.Spread);
+                for(int i = -8; i <= 8; i++) bulletGenerator.ShotPlayerBullet(pos, i * 5f, 10, 2.0f * damageMultiply, BulletType.Spread);
                 break;
         }
 
         // 分裂
-        switch(bulletLevel[(int)BulletType.Split])
+        switch (bulletLevel[(int)BulletType.Split])
         {
             case 1 :
                 break;
@@ -113,7 +113,7 @@ public class Player : MonoBehaviour
         }
 
         // 誘導
-        switch(bulletLevel[(int)BulletType.Homing])
+        switch (bulletLevel[(int)BulletType.Homing])
         {
             case 1 :
                 bulletGenerator.ShotPlayerBullet(pos, 0, 10, 0.25f * damageMultiply, BulletType.Homing);
@@ -130,7 +130,7 @@ public class Player : MonoBehaviour
         }
 
         // 連鎖
-        switch(bulletLevel[(int)BulletType.Chain])
+        switch (bulletLevel[(int)BulletType.Chain])
         {
             case 1 :
                 break;

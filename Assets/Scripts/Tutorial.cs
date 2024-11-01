@@ -5,8 +5,10 @@ using UnityEngine;
 public class Tutorial : MonoBehaviour
 {
     [SerializeField] private LevelManager levelManager;
-    [SerializeField] private Stage stage;
     [SerializeField] private GameObject startText;
+
+    public delegate void StageStart();
+    public StageStart stageStart;
 
     void Start()
     {
@@ -18,7 +20,7 @@ public class Tutorial : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.X)) levelManager.AddBomb();
         if(Input.GetKeyDown(KeyCode.Space))
         {
-            stage.Init();
+            stageStart.Invoke();
             this.gameObject.SetActive(false);
         }
     }

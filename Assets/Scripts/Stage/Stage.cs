@@ -12,10 +12,16 @@ public class Stage : MonoBehaviour
     [SerializeField] private Player _player;
     [SerializeField] private EnemySpawner _enemySpawner;
     [SerializeField] private EnemyBulletSpawner _enemyBulletSpawner;
+    [SerializeField] private Tutorial _tutorial;
     private int currentWave;
     
     private delegate void Wave();
     private List<Wave> waves = new List<Wave>();
+
+    private void Awake()
+    {
+        _tutorial.stageStart = () => Init();
+    }
 
     public void Init()
     {

@@ -3969,6 +3969,7 @@ MonoBehaviour:
     showNormalsHelpInfo: 0
     tabIndex: 0
   initialized: 1
+  globalEditorDisplaySettings: {fileID: 0}
 --- !u!1 &312118179
 GameObject:
   m_ObjectHideFlags: 0
@@ -4771,6 +4772,7 @@ MonoBehaviour:
     showNormalsHelpInfo: 0
     tabIndex: 0
   initialized: 1
+  globalEditorDisplaySettings: {fileID: 0}
 --- !u!1 &332405978
 GameObject:
   m_ObjectHideFlags: 0
@@ -6768,7 +6770,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levelManager: {fileID: 1531018756}
-  stage: {fileID: 550998563}
   startText: {fileID: 1771395694}
 --- !u!1 &494534575
 GameObject:
@@ -7968,6 +7969,7 @@ MonoBehaviour:
   _player: {fileID: 1861510760}
   _enemySpawner: {fileID: 1152414359}
   _enemyBulletSpawner: {fileID: 1212243888}
+  _tutorial: {fileID: 492105969}
 --- !u!4 &550998564
 Transform:
   m_ObjectHideFlags: 0
@@ -14675,6 +14677,7 @@ MonoBehaviour:
     showNormalsHelpInfo: 0
     tabIndex: 0
   initialized: 1
+  globalEditorDisplaySettings: {fileID: 0}
 --- !u!1 &988654691
 GameObject:
   m_ObjectHideFlags: 0
@@ -20705,6 +20708,7 @@ MonoBehaviour:
     showNormalsHelpInfo: 0
     tabIndex: 0
   initialized: 1
+  globalEditorDisplaySettings: {fileID: 0}
 --- !u!4 &1353025688
 Transform:
   m_ObjectHideFlags: 0

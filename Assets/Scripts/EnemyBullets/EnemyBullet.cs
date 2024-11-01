@@ -20,6 +20,8 @@ namespace Enemy.Bullet
 
             sprite.SetActive(true);
             Enable = true;
+            
+            _bulletBase.Init(this.transform);
         }
 
         private void Update()
@@ -28,7 +30,7 @@ namespace Enemy.Bullet
             
             _bulletBase.Action(this.transform);
 
-            if (Mathf.Abs(this.transform.position.x + 2) > 4 || Mathf.Abs(this.transform.position.y) > 4.5f) DestroyBullet();
+            if (Mathf.Abs(this.transform.position.x + 2) > 8 || Mathf.Abs(this.transform.position.y) > 9) DestroyBullet();
         }
 
         private void DestroyBullet()

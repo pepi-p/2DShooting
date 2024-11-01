@@ -16,6 +16,8 @@ public abstract class EnemyBulletBase
         _damage = damage;
     }
     
+    public virtual void Init(Transform transform) {}
+    
     public virtual void Action(Transform transform) {}
 
     public float GetDamage()
